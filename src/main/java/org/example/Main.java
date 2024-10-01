@@ -6,9 +6,84 @@ import org.example.modelos.Cliente;
 import org.example.modelos.Flor;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese los siguientes datos del cliente");
+
+        System.out.print("Ingrese ID: ");
+        Integer id = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese Nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese Apellido: ");
+        String apellido = scanner.nextLine();
+
+        System.out.print("Ingrese Teléfono: ");
+        String telefono = scanner.nextLine();
+
+        System.out.print("Ingrese Dirección: ");
+        String direccion = scanner.nextLine();
+
+        System.out.print("¿Domicilio Confirmado? (true/false): ");
+        Boolean domicilioConfirmado = Boolean.parseBoolean(scanner.nextLine());
+
+        System.out.print("Ingrese Correo: ");
+        String correo = scanner.nextLine();
+
+        System.out.print("Ingrese Ocasión: ");
+        String ocasion = scanner.nextLine();
+
+        System.out.print("Ingrese Presupuesto: ");
+        Double presupuesto = Double.parseDouble(scanner.nextLine());
+
+        System.out.print("Ingrese Mensaje en Tarjeta: ");
+        String mensajeTarjeta = scanner.nextLine();
+
+        Cliente cliente = new Cliente(id, nombre, apellido, telefono,
+                direccion, domicilioConfirmado, correo,
+                ocasion, presupuesto, mensajeTarjeta);
+
+        System.out.println("Ingrese los siguientes datos de la flor");
+
+        System.out.print("Ingrese ID de la Flor: ");
+        Integer idFlor = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese Nombre: ");
+        String nombreFlor = scanner.nextLine();
+
+        System.out.print("Ingrese Color: ");
+        String color = scanner.nextLine();
+
+        System.out.print("Ingrese Tamaño: ");
+        Double tamaño = Double.parseDouble(scanner.nextLine());
+
+        System.out.print("Ingrese Duración: ");
+        String duracion = scanner.nextLine();
+
+        System.out.print("Ingrese Hábitat: ");
+        String habitat = scanner.nextLine();
+
+        System.out.print("Ingrese Número de Pétalos: ");
+        Integer numeroPetalos = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese Precio: ");
+        String precio = scanner.nextLine();
+
+        System.out.print("Ingrese Fragancia: ");
+        String fragancia = scanner.nextLine();
+
+        System.out.print("Ingrese Tiempo de Crecimiento: ");
+        String tiempoCrecimiento = scanner.nextLine();
+
+        // Crear el objeto Flor
+        Flor flor = new Flor(idFlor, nombre, color, tamaño, duracion,
+                habitat, numeroPetalos, precio,
+                fragancia, tiempoCrecimiento);
 
         Cliente clienteUno = new Cliente();
         Cliente clienteDos = new Cliente(
@@ -57,10 +132,10 @@ public class Main {
                 "Buena",
                 "2 meses");
 
-        System.out.println(florUno.getId());
-        System.out.println(florDos.getId());
-        System.out.println(florUno.getNombre());
-        System.out.println(florDos.getNombre());
+        System.out.println(florUno.getIdFlor());
+        System.out.println(florDos.getIdFlor());
+        System.out.println(florUno.getNombreFlor());
+        System.out.println(florDos.getNombreFlor());
         System.out.println(florUno.getColor());
         System.out.println(florDos.getColor());
         System.out.println(florUno.getTamaño());

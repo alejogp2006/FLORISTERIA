@@ -1,8 +1,8 @@
 package org.example.modelos;
 
 public class Flor {
-    Integer id;
-    String nombre;
+    Integer idFlor;
+    String nombreFlor;
     String color;
     Double tamaño;
     String duracion;
@@ -15,9 +15,9 @@ public class Flor {
     public Flor() {
     }
 
-    public Flor(Integer id, String nombre, String color, Double tamaño, String duracion, String habitat, Integer numeroPetalos, String precio, String fragancia, String tiempoCrecimiento) {
-        this.id = id;
-        this.nombre = nombre;
+    public Flor(Integer idFlor, String nombreFlor, String color, Double tamaño, String duracion, String habitat, Integer numeroPetalos, String precio, String fragancia, String tiempoCrecimiento) {
+        this.idFlor = idFlor;
+        this.nombreFlor = nombreFlor;
         this.color = color;
         this.tamaño = tamaño;
         this.duracion = duracion;
@@ -28,20 +28,20 @@ public class Flor {
         this.tiempoCrecimiento = tiempoCrecimiento;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdFlor() {
+        return idFlor;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdFlor(Integer idFlor) {
+        this.idFlor = idFlor;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreFlor() {
+        return nombreFlor;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreFlor(String nombreFlor) {
+        this.nombreFlor = nombreFlor;
     }
 
     public String getColor() {
@@ -106,5 +106,21 @@ public class Flor {
 
     public void setTiempoCrecimiento(String tiempoCrecimiento) {
         this.tiempoCrecimiento = tiempoCrecimiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Flor{" +
+                "idFlor=" + idFlor +
+                ", nombreFlor='" + nombreFlor + '\'' +
+                ", color='" + color + '\'' +
+                ", tamaño=" + tamaño +
+                ", duracion='" + duracion + '\'' +
+                ", habitat='" + habitat + '\'' +
+                ", numeroPetalos=" + numeroPetalos +
+                ", precio='" + precio + '\'' +
+                ", fragancia='" + fragancia + '\'' +
+                ", tiempoCrecimiento='" + tiempoCrecimiento + '\'' +
+                '}';
     }
 }
